@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.google.com/specimen/Alex+Brush" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Parisienne&display=swap" rel="stylesheet">
+    <title>Invitación de Boda</title>
+    <style>
+        /* La magia del movimiento */
+        #photo {
+            transition: transform 0.8s ease-in-out;
+            z-index: 10;
+        }
+        /* Elevamos la foto */
+        .open #photo {
+            transform: translateY(-50%) rotate(-2deg);
+        }
+        /* Contenedor del sobre */
+        .envelope-wrapper {
+            perspective: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="musicaBoda" loop>
+            <source src="music/quien soy yo.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <main class="bg-zinc-100 flex flex-col items-center justify-center min-h-screen overflow-hidden">
+    <div class="my-20 p-20"></div>
+    <div id="main-container" class="envelope-wrapper relative w-80 h-56 cursor-pointer min-w-screen" onclick="toggleEnvelope();togglePlay()">
+        <img 
+            class="w-full h-auto  absolute z-30 -translate-x-20"
+            src="img_boda/flor_explorer.png" alt="">
+        <img 
+            class="w-full h-auto  absolute z-10 -translate-y-3/4 translate-x-1/4"
+            src="img_boda/flor_explorer2.png" alt="">
+        <div class="absolute inset-0 bg-stone-300 rounded-b-lg shadow-xl">
+            <div class="absolute top-0 left-0 w-full h-32 bg-stone-300 -translate-y-full" 
+                 style="clip-path: polygon(0 100%, 50% 0, 100% 100%);">
+            </div>
+        </div>
+
+        <div id="photo" class="absolute inset-x-4 bottom-2 bg-white p-2 shadow-md border border-gray-200">
+            <div class="overflow-hidden aspect-[4/4] bg-gray-100">
+                <img src="img_boda/boda.png" 
+                     alt="Boda" class="w-full h-full object-cover">
+            </div>
+           
+        </div>
+
+        
+        <div class="absolute inset-0 z-20 shadow-2xl">
+            <div class="absolute inset-0 bg-stone-200" style="clip-path: polygon(0 0, 0 100%, 50% 50%);"></div>
+            <div class="absolute inset-0 bg-stone-200" style="clip-path: polygon(100% 0, 100% 100%, 50% 50%);"></div>
+            <div class="absolute inset-0 bg-stone-300 shadow-inner" style="clip-path: polygon(0 100%, 100% 100%, 20% 20%);"></div>
+        </div>
+        
+    </div>
+        <div class="my-10 p-10"></div>
+           
+        <!-- nuevo boton musica -->
+<div id="player-container" class="relative group w-full max-w-sm mx-auto">
+  <div class="relative bg-white border border-gray-100 p-6 rounded-3xl shadow-sm flex flex-col items-center">
+    
+    <h3 class="font-['Alex_Brush'] text-3xl text-[#114176] mb-6 ">Escucha nuestra canción favorita</h3>
+
+    <div class="flex items-center gap-4 w-full">
+      <button onclick="togglePlay();toggleEnvelope()" class="w-12 h-12 flex items-center justify-center bg-[#114176] text-white rounded-full shadow-md">
+        <svg id="play-icon" class="w-5 h-5 ml-1 animate-vinyl" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </button>
+
+      <div class="flex-grow h-1.5 bg-rose-100 rounded-full overflow-hidden">
+        <div id="progress-bar" class="h-full bg-[#114176] w-0 animate-progress" style="animation-play-state: paused;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- nuevo boton musica -->
+        <div class="my-10 p-10"></div>
+        <div class="font-['Alex_Brush'] text-7xl text-[#608d9b] text-center">
+            Nuestra <br> Boda
+            
+        </div>
+
+        <div class="my-10 p-10"></div>
+        <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
+        
+            <div class="border border-[#608d9b] p-2 h-full w-full relative">
+                
+                <div class="border-2 border-double -[#608d9b] p-8 flex flex-col items-center text-center relative">
+                    
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[#608d9b]"></div>
+                    <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#608d9b]"></div>
+                    <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#608d9b]"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#608d9b]"></div>
+
+                    <header class="mb-6">
+                    
+                        <p class="text-xs uppercase tracking-[0.2em] text-[#608d9b] italic">Tenemos el honor de invitarte a la celebración de nuestra unión</p>
+                    </header>
+
+                    <main>
+                        <h1 class="font-['Alex_Brush'] text-4xl md:text-7xl text-[#114176] my-6">Claudia y Eduardo</h1>
+                        
+                        <div class="flex items-center justify-center gap-4 my-6">
+                            <div class="h-[1px] w-12 bg-[#114176]"></div>
+                            <span class="text-[#114176] text-xl">❦</span>
+                            <div class="h-[1px] w-12 bg-[#114176]"></div>
+                        </div>
+
+                        <div class="mt-4 text-[#114176] text-2xl">
+                            𑁍
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="my-10 p-10"></div>
+        <div class="bg-[#114176] w-full min-h-full text-center text-white p-6 my-10  ">
+            <h2 class="p-6 font-light italic text-3xl">"Con la bendición de Dios y nuestros padres,
+                <br> unimos nuestros caminos eternamente"
+            </h2>
+        </div>    
+    <div class="my-10 p-10"></div>
+    <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
+        
+        <div class="border border-[#608d9b] p-2 h-full w-full relative">
+            
+            <div class="border-2 border-double -[#608d9b] p-8 flex flex-col items-center text-center relative">
+                
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#608d9b]"></div>
+
+                <header class="mb-6">
+                    <span class="block text-[10px] tracking-[0.4em] text-stone-400 uppercase mb-4">2026</span>
+                </header>
+
+                <main>
+                    <h1 class="font-['Alex_Brush'] text-4xl md:text-5xl text-[#608d9b] my-6 italic">Agradecimientos</h1>
+                    
+                    <div class="flex items-center justify-center gap-4 my-6">
+                        <div class="h-[1px] w-12 bg-amber-700/40"></div>
+                        <span class="text-[#608d9b] text-xl">❦</span>
+                        <div class="h-[1px] w-12 bg-amber-700/40"></div>
+                    </div>
+                    
+                    <div class="flex grid-cols-2 p-2 justify-between">
+                        <div class="space-y-2">
+                            <p class="serif text-3xl text-[#114176]">Jorge <br> Salvatierra</p>
+                            <p class="text-xs text-stone-400 italic">Padre de la Novia</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="serif text-3xl text-[#114176]">Estela <br> Málaga</p>
+                            <p class="text-xs text-stone-400 italic">Madre de la Novia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex grid-cols-2 p-2 justify-between">
+                        <div class="space-y-2">
+                            <p class="serif text-3xl text-[#114176]">Santiago <br> Mendizabal</p>
+                            <p class="text-xs text-stone-400 italic">Padre del Novio</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="serif text-3xl text-[#114176]">Lidia <br> Guzmán</p>
+                            <p class="text-xs text-stone-400 italic">Madre del Novio</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 space-y-1">
+                        <p class="text-sm text-stone-500 uppercase tracking-tighter">Padrinos</p>
+                        <p class="text-base font-bold text-stone-800">José Santos Cuevas</p>
+                        <p class="text-xs text-stone-400 italic">Padrino de torta</p>
+                    </div>
+                </main>
+
+                <footer class="mt-10">
+                    <div class="mt-4 text-[#608d9b] text-2xl">
+                        𑁍
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+       
+
+
+
+    <div class="my-10 p-10"></div>
+    <div class="relative w-full max-w-md">
+        <img class="w-full h-auto rounded-lg"  src="img_boda/tarjeta_azul.png" alt="">    
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h3 class="text-white text-5xl font-['Alex_Brush'] rotate-[-16deg] ">Ubicación</h3>
+        </div>
+    </div>
+     
+
+    <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
+        
+        <div class="border border-[#608d9b] p-2 h-full w-full relative">
+            
+            
+                
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#608d9b]"></div>
+
+                
+                <main class="p-5">
+                    
+                    <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
+                    <div class="mb-4 inline-block p-3 bg-white rounded-full text-stone-600">
+                         <img class="w-20 max-w-sm h-auto" src="img_boda/gifs/church_blue.gif" alt="">
+                    </div>
+                
+                    <h3 class="text-2xl font-['Alex_Brush'] md:text-4xl mb-6 text-[#608d9b]">Lugar de la Ceremonia</h3>
+                    <p class="text-2xl text-stone-600  mb-6 uppercase tracking-widest font-light">
+                        Iglesia San Miguel
+                        <br> Zona Sur - La Paz
+                        <br> 11:00 hrs
+                    </p>
+
+                    <a href="https://maps.app.goo.gl/hDbYFsPqqyvN8TC67" 
+                    target="_blank" 
+                    class="inline-flex items-center px-8 py-3 bg-[#608d9b] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#114176] transition-all shadow-md active:scale-95">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        ¿Cómo llegar?
+                    </a>
+                </div>
+                </main>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="p-10 my-10"></div>      
+    
+    <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
+        
+        <div class="border border-[#608d9b] p-2 h-full w-full relative">
+            
+            
+                
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#608d9b]"></div>
+
+                
+                <main class="p-5">
+                    
+                    <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
+                    <div class="mb-4 inline-block p-3 bg-white rounded-full text-stone-600">
+                        <img class="w-20 max-w-sm h-auto" src="img_boda/gifs/location_blue.gif" alt="">
+                    </div>
+                
+                    <h3 class="text-2xl font-['Alex_Brush'] md:text-4xl mb-6 text-[#608d9b]">Lugar de la Recepción</h3>
+                    <p class="text-2xl text-stone-600  mb-6 uppercase tracking-widest font-light">
+                        Circulo de Oficiales del Ejercito
+                        <br> Zona Sur - La Paz
+                        <br> 15:00 hrs
+                    </p>
+
+                    <a href="https://maps.app.goo.gl/LDksEeFN7EWw6hHW6" 
+                    target="_blank" 
+                    class="inline-flex items-center px-8 py-3 bg-[#608d9b] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#114176] transition-all shadow-md active:scale-95">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        ¿Cómo llegar?
+                    </a>
+                </div>
+                </main>
+
+
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="my-10 p-10"></div>
+    <div class="relative w-full max-w-md">
+        <img class=" w-full h-auto rounded-lg"  src="img_boda/dresscode.png" alt="">    
+    </div>
+    <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
+        
+        <div class="border border-[#608d9b] p-2 h-full w-full relative">
+            
+            
+                
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#608d9b]"></div>
+
+                
+                <main class="p-5">
+                    
+                    <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
+
+                    <h3 class="text-2xl font-['Alex_Brush'] md:text-4xl mb-6 text-[#608d9b]">Dresscode</h3>
+                    <p class="text-2xl text-stone-600  mb-6 uppercase tracking-widest font-light">
+                        Damas: Vestido Largo 
+                        <br> Hombres: Formal - Gala
+                    </p>
+                </div>
+                </main>
+
+
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="my-10 p-10"></div>
+    <div class="relative w-full max-w-md">
+        <img class="w-full h-auto rounded-lg"  src="img_boda/tarjeta_blanca.png" alt="">    
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h3 class="text-[#608d9b] translate-x-3 text-5xl font-['Alex_Brush'] rotate-[-17deg] ">Regalos</h3>
+        </div>
+    </div>
+
+
+    
+    <div class="p-10 my-10"></div>      
+    
+    <div class="bg-white mb-10 w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
+        
+        <div class="border border-[#608d9b] p-2 h-full w-full relative">
+            
+            
+                
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#608d9b]"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#608d9b]"></div>
+
+                
+                <main class="p-5">
+                    
+                    <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
+                    <div class="mb-4 inline-block p-3 bg-white rounded-full text-stone-600">
+
+                        <img class="w-20  max-w-sm rotate-[-16deg]" src="img_boda/gifs/wired-outline-412-gift-in-reveal (2).gif" alt="">
+                    </div>
+                
+                    <h3 class="text-2xl font-serif italic md:text-4xl mb-6 text-[#608d9b]">Sugerencias de Regalos </h3>
+
+                    <div class="flex justify-center p-3">
+                        
+                        <img class="w-20  max-w-sm " src="img_boda/gifs/wired-outline-3090-document-letter-hover-pinch.gif" alt="">
+                    </div>
+                    
+                    <p class="text-sm text-stone-600  mb-6 tracking-widest font-light">
+                        Tendremos un Buzón Físico en la Celebración 
+                        <br>
+                        <br> Agradecemos tu intención de obsequiarnos algo en este día tan especial<a href=""></a>
+                    </p>
+                    
+                     <div class="flex justify-center p-3">
+                        
+                        <img class="w-20  max-w-sm " src="img_boda/gifs/wired-outline-1335-qr-code-hover-pinch.gif" alt="">
+                        
+                    </div>
+                    <p class="text-sm text-stone-600  mb-6 tracking-widest font-light">
+                        También puedes hacernos un obsequio al QR de esta cuenta.
+               
+                </div>
+                </main>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</main>
+    <script>
+        function toggleEnvelope() {
+            const container = document.getElementById('main-container');
+            container.classList.toggle('open');
+        }
+    </script>
+     <script>
+            const musica = document.getElementById('musicaBoda');
+            const iconPlay = document.getElementById('icon-play');
+            const iconPause = document.getElementById('icon-pause');
+
+            function toggleMusica() {
+                if (musica.paused) {
+                    musica.play();
+                    iconPlay.classList.add('hidden');
+                    iconPause.classList.remove('hidden');
+                } else {
+                    musica.pause();
+                    iconPlay.classList.remove('hidden');
+                    iconPause.classList.add('hidden');
+                }
+            }
+    </script>
+    <style>
+       
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Parisienne&display=swap');
+      
+        /* Rotación suave del disco/icono */
+        @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+        }
+
+        /* Movimiento de la barra de progreso */
+        @keyframes progress-animation {
+        from { width: 0%; }
+        to { width: 100%; }
+        }
+
+  
+        /* La barra siempre tiene la animación asignada */
+        .animate-progress {
+        animation: progress-animation 180s linear forwards;
+        animation-play-state: paused; /* Empieza quieta */
+        }
+
+        /* El icono también empieza quieto */
+        .animate-vinyl {
+        animation: spin-slow 3s linear infinite;
+        animation-play-state: paused;
+        }
+    </style>
+    <script>
+        function togglePlay() {
+        const musica = document.getElementById('musicaBoda');
+        const bar = document.getElementById('progress-bar');
+        const icon = document.getElementById('play-icon');
+        
+        if (musica.paused) {
+            musica.play();
+            bar.style.animationPlayState = 'running';
+            icon.style.animationPlayState = 'running';
+        } else {
+            musica.pause();
+            bar.style.animationPlayState = 'paused';
+            icon.style.animationPlayState = 'paused';
+        }
+        }
+    </script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
