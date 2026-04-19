@@ -30,12 +30,15 @@
 </head>
 <body>
     <audio id="musicaBoda" loop>
-            <source src="img_boda/quien soy yo.mp3" type="audio/mpeg">
+            <source src="music/quien soy yo.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
     </audio>
     
     <main class="bg-zinc-100 flex flex-col items-center justify-center min-h-screen overflow-hidden">
-    <div class="my-20 p-20"></div>
+        <div class="my-10 p-10"></div>
+        <h1 class="font-['Alex_Brush'] font-bold text-7xl md:text-7xl text-[#114176] my-6">Claudia & Eduardo</h1>
+        <h1 class="font-light font-bold text-xl md:text-3xl text-[#114176] my-6">30 de mayo de 2026</h1>
+        <div class="my-20 p-20"></div>
     <div id="main-container" class="envelope-wrapper relative w-80 h-56 cursor-pointer min-w-screen" onclick="toggleEnvelope();togglePlay()">
         <img 
             class="w-full h-auto  absolute z-30 -translate-x-20"
@@ -71,13 +74,14 @@
 <div id="player-container" class="relative group w-full max-w-sm mx-auto">
   <div class="relative bg-white border border-gray-100 p-6 rounded-3xl shadow-sm flex flex-col items-center">
     
-    <h3 class="font-['Alex_Brush'] text-3xl text-[#114176] mb-6 ">Escucha nuestra canción favorita</h3>
+    <h3 class=" text-xl animate-bounce text-[#114176] mb-6 text-center">Dale Click a la Foto <br> y escucha nuestra canción favorita</h3>
 
     <div class="flex items-center gap-4 w-full">
       <button onclick="togglePlay();toggleEnvelope()" class="w-12 h-12 flex items-center justify-center bg-[#114176] text-white rounded-full shadow-md">
-        <svg id="play-icon" class="w-5 h-5 ml-1 animate-vinyl" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M8 5v14l11-7z"/>
+        <svg id="play-icon" class="w-5 h-5 ml-1 animate-vinyl" fill="currentColor" viewBox="0 0 24 24 rotate ">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-2.3-2.5l2.25-.643a1.5 1.5 0 0 0 1.122-1.445V5.25a.225.225 0 0 0-.165-.218L8.273 7.59a.225.225 0 0 0-.16.218v10.5a2.25 2.25 0 0 1-1.635 2.162l-1.31.375a1.803 1.803 0 1 1-2.3-2.5l2.25-.643a1.5 1.5 0 0 0 1.122-1.445V9.304a2.25 2.25 0 0 1 1.213-2.003l10.5-5.304a2.25 2.25 0 0 1 2.235.022Z" />
         </svg>
+        
       </button>
 
       <div class="flex-grow h-1.5 bg-rose-100 rounded-full overflow-hidden">
@@ -87,13 +91,13 @@
   </div>
 </div>
         <!-- nuevo boton musica -->
-        <div class="my-10 p-10"></div>
+        <!-- <div class="my-10 p-10"></div>
         <div class="font-['Alex_Brush'] text-7xl text-[#608d9b] text-center">
             Nuestra <br> Boda
             
-        </div>
+        </div> -->
 
-        <div class="my-10 p-10"></div>
+        <div class="my-10 p-10"></div> 
         <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
         
             <div class="border border-[#608d9b] p-2 h-full w-full relative">
@@ -107,11 +111,12 @@
 
                     <header class="mb-6">
                     
-                        <p class="text-xs uppercase tracking-[0.2em] text-[#608d9b] italic">Tenemos el honor de invitarte a la celebración de nuestra unión</p>
+                        <p class="text-xs uppercase tracking-[0.2em] text-[#608d9b] italic">Tenemos el honor de invitarte a la celebración de nuestra unión <br> en matrimonio</p>
                     </header>
 
                     <main>
-                        <h1 class="font-['Alex_Brush'] text-4xl md:text-7xl text-[#114176] my-6">Claudia y Eduardo</h1>
+                        <h1 class="font-['Alex_Brush'] text-5xl md:text-5xl text-[#114176] my-6 font-bold" >Claudia Quiñones <br>y <br> Eduardo Mendizabal</h1>
+                        <h2 class=" text-md md:text-md text-[#114176] my-6">Evento a Realizarse el día sábado <br>30 de mayo</h2>
                         
                         <div class="flex items-center justify-center gap-4 my-6">
                             <div class="h-[1px] w-12 bg-[#114176]"></div>
@@ -126,14 +131,14 @@
 
                 </div>
             </div>
-        </div>
+        </div> 
 
         <div class="my-10 p-10"></div>
-        <div class="bg-[#114176] w-full min-h-full text-center text-white p-6 my-10  ">
+        <!-- <div class="bg-[#114176] w-full min-h-full text-center text-white p-6 my-10  ">
             <h2 class="p-6 font-light italic text-3xl">"Con la bendición de Dios y nuestros padres,
                 <br> unimos nuestros caminos eternamente"
             </h2>
-        </div>    
+        </div>     -->
     <div class="my-10 p-10"></div>
     <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
         
@@ -161,22 +166,22 @@
                     
                     <div class="flex grid-cols-2 p-2 justify-between">
                         <div class="space-y-2">
-                            <p class="serif text-3xl text-[#114176]">Jorge <br> Salvatierra</p>
+                            <p class="serif text-xl text-[#114176]">Josué <br> Quiñones</p>
                             <p class="text-xs text-stone-400 italic">Padre de la Novia</p>
                         </div>
                         <div class="space-y-2">
-                            <p class="serif text-3xl text-[#114176]">Estela <br> Málaga</p>
+                            <p class="serif text-xl text-[#114176]">Estela <br> Santibañez</p>
                             <p class="text-xs text-stone-400 italic">Madre de la Novia</p>
                         </div>
                     </div>
                     
                     <div class="flex grid-cols-2 p-2 justify-between">
                         <div class="space-y-2">
-                            <p class="serif text-3xl text-[#114176]">Santiago <br> Mendizabal</p>
+                            <p class="serif text-xl text-[#114176]">Santiago <br> Mendizabal</p>
                             <p class="text-xs text-stone-400 italic">Padre del Novio</p>
                         </div>
                         <div class="space-y-2">
-                            <p class="serif text-3xl text-[#114176]">Lidia <br> Guzmán</p>
+                            <p class="serif text-xl text-[#114176]">Lidia <br> Guzmán</p>
                             <p class="text-xs text-stone-400 italic">Madre del Novio</p>
                         </div>
                     </div>
@@ -199,19 +204,70 @@
     </div>
 
 
-       
-
-
-
-    <div class="my-10 p-10"></div>
-    <div class="relative w-full max-w-md">
-        <img class="w-full h-auto rounded-lg"  src="img_boda/tarjeta_azul.png" alt="">    
-        <div class="absolute inset-0 flex items-center justify-center">
-            <h3 class="text-white text-5xl font-['Alex_Brush'] rotate-[-16deg] ">Ubicación</h3>
+<!-- TIMER -->
+ 
+            <section class="min-h-screen w-full flex items-center justify-center p-4  ">
+                <img  class="absolute translate-x-[-300px] translate-y-[-100px]" src="img_boda/colgadera_izq.png" alt="">
+                <img  class="absolute translate-x-[300px] translate-y-[-150px]" src="img_boda/colgadera_der.png" alt="">
+                <div class="z-20 w-[95%] max-w-4xl mx-auto h-auto p-8 md:p-8  rounded-3xl  text-center">
+                    <div class="mb-4 inline-block p-1 rounded-full ">
+                        <img class="w-60 max-w-sm h-auto" src="img_boda/gifs/reloj_blue.gif" alt="">
+                    </div>
+                    <h2 class="p-8 text-2xl md:text-5xl font-['Alex_Brush'] text-[#608d9b] mb-8">Faltan tan solo...</h2>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="countdown">
+                        <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
+                            <span id="days" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
+                            <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Días</span>
+                        </div>
+                        <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
+                            <span id="hours" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
+                            <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Horas</span>
+                        </div>
+                        <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
+                            <span id="minutes" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
+                            <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Minutos</span>
+                        </div>
+                        <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
+                            <span id="seconds" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
+                            <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Segundos</span>
+                        </div>
+                    </div>
+                    <div class="py-10"></div>
+                     <div class="text-py-10 flex items-center justify-center   rounded-xl  ">
+                        <add-to-calendar-button
+                            name="Boda de Claudia y Eduardo"
+                            description="Celebramos nuestra unión este 30 de mayo."
+                            startDate="2026-05-30"
+                            startTime="11:00"
+                            endTime="23:59"
+                            timeZone="America/La_Paz"
+                            location="Parroquia San Miguel - Zona Sur"
+                            options="'Google','Apple','Outlook.com'"
+                            language="es"
+                            buttonStyle="round"
+                            label="Agendar en el calendario"
+                            class="hover:shadow-lg transition-shadow bg-[#608d9b] rounded-3xl border"
+                            
+                        >
+                        </add-to-calendar-button>
+                    </div>
+                </div>
+                
+            </section>
+            
+               
+            <!-- TIMER -->
+<!-- CALENDARIO -->
+                
+           
+                <!-- CALENDARIO -->
+    
+        <img class="w-40 py-3  max-w-md h-auto" src="img_boda/gifs/church_blue.gif" alt="">
+        <h3 class="text-[#608d9b] text-5xl font-['Alex_Brush'] ">Ubicación</h3>
+        <div class="my-5 p-5">
+                <img  class="w-[500px] absolute translate-x-[-600px]" src="img_boda/florcitas.png" alt="">
         </div>
-    </div>
-     
-
     <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
         
         <div class="border border-[#608d9b] p-2 h-full w-full relative">
@@ -226,27 +282,49 @@
                 
                 <main class="p-5">
                     
-                    <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
+                    <div class="  bg-white/50 backdrop-blur-sm  border border-stone-100 text-center shadow-sm">
+                    
                     <div class="mb-4 inline-block p-3 bg-white rounded-full text-stone-600">
-                         <img class="w-20 max-w-sm h-auto" src="img_boda/gifs/church_blue.gif" alt="">
+                        <img class="w-20 max-w-sm h-auto" src="img_boda/gifs/location_blue.gif" alt="">
                     </div>
-                
                     <h3 class="text-2xl font-['Alex_Brush'] md:text-4xl mb-6 text-[#608d9b]">Lugar de la Ceremonia</h3>
-                    <p class="text-2xl text-stone-600  mb-6 uppercase tracking-widest font-light">
-                        Iglesia San Miguel
-                        <br> Zona Sur - La Paz
-                        <br> 11:00 hrs
-                    </p>
+                        <p class="text-md text-stone-600  mb-6 uppercase tracking-widest font-light">
+                            Iglesia San Miguel
+                            <br> Zona Sur - La Paz
+                            <br> 11:00 hrs
+                        </p>
 
-                    <a href="https://maps.app.goo.gl/hDbYFsPqqyvN8TC67" 
-                    target="_blank" 
-                    class="inline-flex items-center px-8 py-3 bg-[#608d9b] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#114176] transition-all shadow-md active:scale-95">
-                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                        ¿Cómo llegar?
-                    </a>
+                        <a href="https://maps.app.goo.gl/hDbYFsPqqyvN8TC67" 
+                        target="_blank" 
+                        class="inline-flex items-center px-8 py-3 bg-[#608d9b] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#114176] transition-all shadow-md active:scale-95">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            ¿Cómo llegar?
+                        </a>                    
+                        <div class="my-3 p-3"></div>
+                            <h3 class="text-2xl font-['Alex_Brush'] md:text-4xl mb-6 text-[#608d9b]">Lugar de la Recepción</h3>
+                            <p class="text-md text-stone-600  mb-6 uppercase tracking-widest font-light">
+                                Circulo de Oficiales del Ejercito
+                                <br> Zona Sur - La Paz
+                                <br> 15:00 hrs
+                            </p>
+
+                            <a href="https://maps.app.goo.gl/LDksEeFN7EWw6hHW6" 
+                            target="_blank" 
+                            class="inline-flex items-center px-8 py-3 bg-[#608d9b] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#114176] transition-all shadow-md active:scale-95">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                ¿Cómo llegar?
+                            </a>
+                 
+                     
+                    
+                    
                 </div>
+                
+
                 </main>
 
 
@@ -256,50 +334,12 @@
 
     <div class="p-10 my-10"></div>      
     
-    <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
-        
-        <div class="border border-[#608d9b] p-2 h-full w-full relative">
-            
-            
-                
-                <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[#608d9b]"></div>
-                <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#608d9b]"></div>
-                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#608d9b]"></div>
-                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#608d9b]"></div>
 
-                
-                <main class="p-5">
-                    
-                    <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
-                    <div class="mb-4 inline-block p-3 bg-white rounded-full text-stone-600">
-                        <img class="w-20 max-w-sm h-auto" src="img_boda/gifs/location_blue.gif" alt="">
-                    </div>
-                
-                    <h3 class="text-2xl font-['Alex_Brush'] md:text-4xl mb-6 text-[#608d9b]">Lugar de la Recepción</h3>
-                    <p class="text-2xl text-stone-600  mb-6 uppercase tracking-widest font-light">
-                        Circulo de Oficiales del Ejercito
-                        <br> Zona Sur - La Paz
-                        <br> 15:00 hrs
-                    </p>
-
-                    <a href="https://maps.app.goo.gl/LDksEeFN7EWw6hHW6" 
-                    target="_blank" 
-                    class="inline-flex items-center px-8 py-3 bg-[#608d9b] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#114176] transition-all shadow-md active:scale-95">
-                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                        ¿Cómo llegar?
-                    </a>
-                </div>
-                </main>
-
-
-            </div>
-        </div>
-    </div>
 
     
-    <div class="my-10 p-10"></div>
+    <div class="my-10 p-10">
+        <img  class="w-[400px] absolute translate-x-[100px] translate-y-[400px]" src="img_boda/florcitas.png" alt="">
+    </div>
     <div class="relative w-full max-w-md">
         <img class=" w-full h-auto rounded-lg"  src="img_boda/dresscode.png" alt="">    
     </div>
@@ -320,7 +360,7 @@
                     <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
 
                     <h3 class="text-2xl font-['Alex_Brush'] md:text-4xl mb-6 text-[#608d9b]">Dresscode</h3>
-                    <p class="text-2xl text-stone-600  mb-6 uppercase tracking-widest font-light">
+                    <p class="text-md text-stone-600  mb-6 uppercase tracking-widest font-light">
                         Damas: Vestido Largo 
                         <br> Hombres: Formal - Gala
                     </p>
@@ -333,18 +373,22 @@
     </div>
 
     
-    <div class="my-10 p-10"></div>
-    <div class="relative w-full max-w-md">
+    <div class="my-10 p-10">
+        
+    </div>
+    <!-- <div class="relative w-full max-w-md">
         <img class="w-full h-auto rounded-lg"  src="img_boda/tarjeta_blanca.png" alt="">    
         <div class="absolute inset-0 flex items-center justify-center">
             <h3 class="text-[#608d9b] translate-x-3 text-5xl font-['Alex_Brush'] rotate-[-17deg] ">Regalos</h3>
         </div>
-    </div>
+    </div> -->
 
 
     
     <div class="p-10 my-10"></div>      
-    
+    <img class="w-40 py-3  max-w-md h-auto" src="img_boda/gifs/wired-outline-412-gift-in-reveal (2).gif" alt="">
+    <h3 class="text-[#608d9b] text-5xl font-['Alex_Brush'] ">Sugerencias de Regalos</h3>
+    <div class="my-5 p-5"></div>
     <div class="bg-white mb-10 w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
         
         <div class="border border-[#608d9b] p-2 h-full w-full relative">
@@ -360,12 +404,12 @@
                 <main class="p-5">
                     
                     <div class="  bg-white/50 backdrop-blur-sm rounded-2xl border border-stone-100 text-center shadow-sm">
-                    <div class="mb-4 inline-block p-3 bg-white rounded-full text-stone-600">
+                    <!-- <div class="mb-4 inline-block p-3 bg-white rounded-full text-stone-600">
 
                         <img class="w-20  max-w-sm rotate-[-16deg]" src="img_boda/gifs/wired-outline-412-gift-in-reveal (2).gif" alt="">
-                    </div>
+                    </div> -->
                 
-                    <h3 class="text-2xl font-serif italic md:text-4xl mb-6 text-[#608d9b]">Sugerencias de Regalos </h3>
+                    <!-- <h3 class="text-2xl font-serif italic md:text-4xl mb-6 text-[#608d9b]">Sugerencias de Regalos </h3> -->
 
                     <div class="flex justify-center p-3">
                         
@@ -393,8 +437,19 @@
             </div>
         </div>
     </div>
+    <div class="p-10 my-10"></div> 
+      
+        <button class="w-50 h-auto m-12  md:p-12 bg-[#114176] text-white hover:bg-[#608d9b] transition-colors duration-300 tracking-widest uppercase text-xl rounded-full shadow-2xl animate-pulse">
+                    
+                    <a href="https://wa.me/59175886352?text=¡Felicidades+por+la+Boda!+Confirmo+mi+asistencia+a+la+misma.+Somos+__+personas." 
+                        target="_blank">
+                        Confirmar Asistencia
+                    </a>
+        </button>
+        
 
-
+    
+    <div class="p-10 my-10"> </div>
 </main>
     <script>
         function toggleEnvelope() {
@@ -419,6 +474,7 @@
                 }
             }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
     <style>
        
         @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Parisienne&display=swap');
@@ -464,6 +520,29 @@
             icon.style.animationPlayState = 'paused';
         }
         }
+    </script>
+    <script>
+            
+            const fechaEvento = new Date('2026-05-30T11:00:00-04:00').getTime();
+            const timer = setInterval(function() {
+                const ahora = new Date().getTime();
+                const distancia = fechaEvento - ahora;
+
+                const d = Math.floor(distancia / (1000 * 60 * 60 * 24)) + 1;
+                const h = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((distancia % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = d < 10 ? '0' + d : d;
+                document.getElementById("hours").innerText = h < 10 ? '0' + h : h;
+                document.getElementById("minutes").innerText = m < 10 ? '0' + m : m;
+                document.getElementById("seconds").innerText = s < 10 ? '0' + s : s;
+
+                if (distancia < 0) {
+                    clearInterval(timer);
+                    document.getElementById("countdown").innerHTML = "<p class='text-2xl italic text-[#AC8E84] w-full'>¡Hoy es el gran día!</p>";
+                }
+            }, 1000);
     </script>
 </body>
 </html> 
