@@ -158,30 +158,30 @@
                 <main>
                     <h1 class="font-['Alex_Brush'] text-4xl md:text-5xl text-[#608d9b] my-6 italic">Agradecimientos</h1>
                     
-                    <div class="flex items-center justify-center gap-4 my-6">
+                    <div class="flex items-center justify-between gap-4 my-6">
                         <div class="h-[1px] w-12 bg-amber-700/40"></div>
                         <span class="text-[#608d9b] text-xl">❦</span>
                         <div class="h-[1px] w-12 bg-amber-700/40"></div>
                     </div>
                     
-                    <div class="flex grid-cols-2 p-2 justify-between">
+                    <div class="flex grid-cols-2 py-2 justify-between">
                         <div class="space-y-2">
-                            <p class="serif text-xl text-[#114176]">Josué <br> Quiñones</p>
+                            <p class="serif text-md text-[#114176]">Josué <br> Quiñones</p>
                             <p class="text-xs text-stone-400 italic">Padre de la Novia</p>
                         </div>
                         <div class="space-y-2">
-                            <p class="serif text-xl text-[#114176]">Estela <br> Santibañez</p>
+                            <p class="serif text-md text-[#114176]">Estela <br> Santibañez</p>
                             <p class="text-xs text-stone-400 italic">Madre de la Novia</p>
                         </div>
                     </div>
                     
-                    <div class="flex grid-cols-2 p-2 justify-between">
+                    <div class="flex grid-cols-2 py-2 justify-between">
                         <div class="space-y-2">
-                            <p class="serif text-xl text-[#114176]">Santiago <br> Mendizabal</p>
+                            <p class="serif text-md text-[#114176]">Santiago <br> Mendizabal</p>
                             <p class="text-xs text-stone-400 italic">Padre del Novio</p>
                         </div>
                         <div class="space-y-2">
-                            <p class="serif text-xl text-[#114176]">Lidia <br> Guzmán</p>
+                            <p class="serif text-md text-[#114176]">Lidia <br> Guzmán</p>
                             <p class="text-xs text-stone-400 italic">Madre del Novio</p>
                         </div>
                     </div>
@@ -206,9 +206,12 @@
 
 <!-- TIMER -->
  
-            <section class="relative min-h-screen w-full flex items-center justify-center p-4  overflow-hidden">
-                <img  class="absolute translate-x-[150px] translate-y-[-100px]" src="img_boda/colgadera_izq.png" alt="">
-                <img  class="absolute translate-x-[50px] translate-y-[-150px]" src="img_boda/colgadera_der.png" alt="">
+            <section class="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden ">
+                    <img class="absolute left-1/2 -translate-x-[150%] md:-translate-x-[300px] -translate-y-[100px] w-[150px] md:w-48 pointer-events-none" 
+         src="img_boda/colgadera_izq.png" alt="decoración">
+    
+    <img class="absolute left-1/2 translate-x-[50%] md:translate-x-[300px] -translate-y-[150px] w-[150px] md:w-48 pointer-events-none" 
+         src="img_boda/colgadera_der.png" alt="decoración">
                 <div class="z-20 w-[95%] max-w-4xl mx-auto h-auto p-8 md:p-8  rounded-3xl  text-center">
                     <div class="mb-4 inline-block p-1 rounded-full ">
                         <img class="w-60 max-w-sm h-auto" src="img_boda/gifs/reloj_blue.gif" alt="">
@@ -260,62 +263,6 @@
             <!-- TIMER -->
 
 
-<section class="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden">
-    
-    <img class="absolute left-1/2 -translate-x-[150%] md:-translate-x-[300px] -translate-y-[100px] w-32 md:w-48 pointer-events-none" 
-         src="img_boda/colgadera_izq.png" alt="decoración">
-    
-    <img class="absolute left-1/2 translate-x-[50%] md:translate-x-[300px] -translate-y-[150px] w-32 md:w-48 pointer-events-none" 
-         src="img_boda/colgadera_der.png" alt="decoración">
-
-    <div class="z-20 w-[95%] max-w-4xl mx-auto h-auto p-8 rounded-3xl text-center">
-        <div class="mb-4 inline-block p-1 rounded-full">
-            <img class="w-60 max-w-sm h-auto mx-auto" src="img_boda/gifs/reloj_blue.gif" alt="timer">
-        </div>
-        
-        <h2 class="p-8 text-2xl md:text-5xl font-['Alex_Brush'] text-[#608d9b] mb-8">Faltan tan solo...</h2>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="countdown">
-            <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
-                <span id="days" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
-                <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Días</span>
-            </div>
-            <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
-                <span id="hours" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
-                <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Horas</span>
-            </div>
-            <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
-                <span id="minutes" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
-                <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Minutos</span>
-            </div>
-            <div class="flex flex-col p-4 bg-stone-50 rounded-2xl border border-stone-100">
-                <span id="seconds" class="text-3xl md:text-5xl font-bold text-[#608d9b]">00</span>
-                <span class="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Segundos</span>
-            </div>
-        </div>
-
-        <div class="py-10"></div>
-        
-        <div class="flex items-center justify-center">
-            <add-to-calendar-button
-                name="Boda de Claudia y Eduardo"
-                description="Celebramos nuestra unión este 30 de mayo."
-                startDate="2026-05-30"
-                startTime="11:00"
-                endTime="23:59"
-                timeZone="America/La_Paz"
-                location="Parroquia San Miguel - Zona Sur"
-                options="'Google','Apple','Outlook.com'"
-                language="es"
-                buttonStyle="round"
-                label="Agendar en el calendario"
-                class="hover:shadow-lg transition-shadow bg-[#608d9b] rounded-3xl border"
-            ></add-to-calendar-button>
-        </div>
-    </div>
-</section>
-
-        
 <!-- CALENDARIO -->
                 
            
@@ -324,10 +271,10 @@
         <img class="w-40 py-3  max-w-md h-auto" src="img_boda/gifs/church_blue.gif" alt="">
         <h3 class="text-[#608d9b] text-5xl font-['Alex_Brush'] ">Ubicación</h3>
         <div class="my-5 p-5">
-                <img  class="w-[500px] absolute translate-x-[-600px]" src="img_boda/florcitas.png" alt="">
+              
         </div>
-    <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
-        
+
+        <div class="bg-white w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">   
         <div class="border border-[#608d9b] p-2 h-full w-full relative">
             
             
@@ -376,28 +323,16 @@
                                 </svg>
                                 ¿Cómo llegar?
                             </a>
-                 
-                     
-                    
-                    
                 </div>
-                
-
                 </main>
-
-
             </div>
         </div>
     </div>
 
-    <div class="p-10 my-10"></div>      
-    
+    <div class="p-10 my-10 overflow-hidden">
+          <img  class="w-[400px] absolute translate-y-[600px] translate-x-[-300px]" src="img_boda/florcitas.png" alt="">
+    </div>      
 
-
-    
-    <div class="my-10 p-10">
-        <img  class="w-[400px] absolute translate-x-[100px] translate-y-[400px]" src="img_boda/florcitas.png" alt="">
-    </div>
     <div class="relative w-full max-w-md">
         <img class=" w-full h-auto rounded-lg"  src="img_boda/dresscode.png" alt="">    
     </div>
@@ -431,9 +366,7 @@
     </div>
 
     
-    <div class="my-10 p-10">
-        
-    </div>
+    <div class="my-10 p-10"></div>
     <!-- <div class="relative w-full max-w-md">
         <img class="w-full h-auto rounded-lg"  src="img_boda/tarjeta_blanca.png" alt="">    
         <div class="absolute inset-0 flex items-center justify-center">
@@ -445,7 +378,7 @@
     
     <div class="p-10 my-10"></div>      
     <img class="w-40 py-3  max-w-md h-auto" src="img_boda/gifs/wired-outline-412-gift-in-reveal (2).gif" alt="">
-    <h3 class="text-[#608d9b] text-5xl font-['Alex_Brush'] ">Sugerencias de Regalos</h3>
+    <h3 class="text-[#608d9b] text-5xl font-['Alex_Brush'] text-center">Sugerencias de Regalos</h3>
     <div class="my-5 p-5"></div>
     <div class="bg-white mb-10 w-full max-w-md p-4 shadow-2xl border border-stone-200 relative overflow-hidden">
         
@@ -497,18 +430,17 @@
     </div>
     <div class="p-10 my-10"></div> 
       
-        <button class="w-50 h-full p-5  m-12  md:p-12 bg-[#114176] text-white hover:bg-[#608d9b] transition-colors duration-300 tracking-widest uppercase text-xl rounded-full shadow-2xl animate-pulse">
+        <button class="w-50 h-full p-5 m-12  md:p-12 bg-[#114176] text-white hover:bg-[#608d9b] transition-colors duration-300 tracking-widest uppercase text-md rounded-full shadow-2xl animate-pulse text-center">
                     
-                    <a href="https://wa.me/59175886352?text=¡Felicidades+por+la+Boda!+Confirmo+mi+asistencia+a+la+misma.+Somos+__+personas." 
+                    <a class="py-10 px-2" href="https://wa.me/59175886352?text=¡Felicidades+por+la+Boda!+Confirmo+mi+asistencia+a+la+misma.+Somos+__+personas." 
                         target="_blank">
                         Confirmar Asistencia
                     </a>
         </button>
         
-
-    
     <div class="p-10 my-10"> </div>
 </main>
+
     <script>
         function toggleEnvelope() {
             const container = document.getElementById('main-container');
